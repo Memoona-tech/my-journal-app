@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'MyJournal 🌷',
   description: 'Write your thoughts beautifully.',
+  icons: {
+    icon: "/favicon.png", // or "/favicon.ico"
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

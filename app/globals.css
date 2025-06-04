@@ -1,4 +1,51 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap');
+
+.font-love {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* In your globals.css */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animated {
+  background: linear-gradient(-45deg,#ff9a9e, #fad0c4, #fbc2eb, #d1c48c);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.font-great {
+  font-family: 'Great Vibes', cursive;
+}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.font-vibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
+
+.font-love {
+  font-family: 'Love Light', cursive;
+}
+
+/* REMOVE or RESET any margin/padding from body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 
 :root {
   --background: #ffffff;

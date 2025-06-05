@@ -3,9 +3,6 @@ import withPWA from 'next-pwa'
 
 const baseConfig = {
   reactStrictMode: true,
-  experimental: {
-    serverActions: true,
-  },
 }
 
 export default withPWA({

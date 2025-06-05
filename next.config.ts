@@ -1,13 +1,16 @@
 // next.config.ts
 import withPWA from 'next-pwa'
 
-const nextConfig = {
+const baseConfig = {
   reactStrictMode: true,
-  // any other config
+  experimental: {
+    serverActions: true,
+  },
 }
 
 export default withPWA({
   dest: 'public',
   register: true,
   skipWaiting: true,
-})(nextConfig)
+  disable: process.env.NODE_ENV === 'development',
+})(baseConfig)

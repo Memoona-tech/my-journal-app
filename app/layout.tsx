@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/public/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={`${inter.className} bg-base-100 text-base-content`}>

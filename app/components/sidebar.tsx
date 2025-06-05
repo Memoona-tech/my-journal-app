@@ -75,7 +75,7 @@ const { today, yesterday, older } = groupEntries(entries);
         <div className="p-6 border-b border-b-pink-300">
           <Link href="/">
             <h2 className="text-pink-500 text-2xl font-bold hover:text-pink-700 hover:cursor-pointer transition-colors duration-300">
-              MyJournal🌷.
+              SkyCarly🌷.
             </h2>
           </Link>
         </div>

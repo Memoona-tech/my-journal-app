@@ -8,7 +8,7 @@ export const Header = () => {
 
         <Link href="/">
           <span className="text-2xl font-bold hover:text-pink-800 transition-colors duration-300">
-            MyJournal🌷.
+            SkyCarly🌷.
           </span>
         </Link>
         <SocialLinks />

@@ -37,7 +37,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-rose-200 text-rose-800 py-4 px-6 text-center text-sm italic">
-        © 2025 Your Journal Sanctuary. Crafted with love & lavender 🌷
+        © 2025 Your Journal Sanctuary. Crafted with love & softness 🌷
       </footer>
     </div>
   );

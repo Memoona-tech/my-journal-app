@@ -7,7 +7,7 @@ export const SocialLinks = () => {
     return(
         <div className="flex flex-row items-center justify-between p-6 space-x-4">
             
-                  <Link href="https://www.instagram.com/itz.memoona/" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                     <Instagram className='inline-block mr-2   hover:text-pink-800 transition-colors duration-300' />
                   </Link>
                   <Link href="https://www.youtube.com/@skycarly/" target="_blank" rel="noopener noreferrer">

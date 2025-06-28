@@ -70,10 +70,27 @@ if (!self.define) {
 define(['./workbox-e43f5367'], (function (workbox) { 'use strict';
 
   importScripts();
+
   self.skipWaiting();
+
+  self.addEventListener("activate", event => {
+  const currentCaches = ["start-url-v1.1", "dev-v1.1"];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (!currentCaches.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
   workbox.clientsClaim();
   workbox.registerRoute("/", new workbox.NetworkFirst({
-    "cacheName": "start-url",
+    "cacheName": "start-url-v1.1",
     plugins: [{
       cacheWillUpdate: async ({
         request,
@@ -93,7 +110,7 @@ define(['./workbox-e43f5367'], (function (workbox) { 'use strict';
     }]
   }), 'GET');
   workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
-    "cacheName": "dev",
+    "cacheName": "dev-v1.1",
     plugins: []
   }), 'GET');
 

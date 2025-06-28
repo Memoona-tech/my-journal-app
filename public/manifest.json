@@ -6,6 +6,7 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait",
+  "version": "1.1",
   "icons": [
     {
       "src": "/tulip (3).png",

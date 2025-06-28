@@ -59,19 +59,18 @@ export default function JournalPage() {
     setCurrentDate(formattedDate);
   }, []);
 
-  // Called once when component mounts to check if already unlocked
+
   useEffect(() => {
-    const unlocked = localStorage.getItem('isUnlocked');
+    const unlocked = sessionStorage.getItem('isUnlocked');
     if (unlocked === 'true'){
-      // If unlocked flag is stored in localStorage, update state
       setIsUnlocked(true);
     }
   }, []);
 
 
   const handleUnlock = () => {
-    localStorage.setItem('isUnlocked', 'true');  // Save state that user has unlocked 
-    setIsUnlocked(true); // update state
+    sessionStorage.setItem('isUnlocked', 'true');
+    setIsUnlocked(true);
   }
 
   if(!isUnlocked) return <PinLock onUnlock={handleUnlock} />;
